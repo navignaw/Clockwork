@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4cffa503ce9f87647ba3854f5c1d8f19
-timeCreated: 1447099140
+timeCreated: 1447271301
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,7 +62,7 @@ TextureImporter:
         width: 36
         height: 40
       alignment: 9
-      pivot: {x: .649999976, y: 0}
+      pivot: {x: .649999976, y: .0500000007}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: klok_1
       rect:
@@ -72,7 +72,7 @@ TextureImporter:
         width: 36
         height: 40
       alignment: 9
-      pivot: {x: .649999976, y: 0}
+      pivot: {x: .649999976, y: .0500000007}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: klok_2
       rect:
@@ -82,7 +82,7 @@ TextureImporter:
         width: 36
         height: 40
       alignment: 9
-      pivot: {x: .649999976, y: 0}
+      pivot: {x: .649999976, y: .0500000007}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: klok_3
       rect:
@@ -92,7 +92,7 @@ TextureImporter:
         width: 36
         height: 40
       alignment: 9
-      pivot: {x: .649999976, y: 0}
+      pivot: {x: .649999976, y: .0500000007}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
