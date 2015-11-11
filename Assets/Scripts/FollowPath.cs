@@ -7,18 +7,12 @@ public class FollowPath : MonoBehaviour {
     public float currentTime = 5f;
     public float timeScale = 0f;
 
-    private Vector2 lastPos = Vector2.zero;
-    private bool facingRight = true;
     private Animator anim;
-    private Rigidbody2D rb2d;
 
     // Use this for initialization
     void Awake()
     {
         anim = GetComponent<Animator>();
-        rb2d = GetComponent<Rigidbody2D>();
-        lastPos = transform.position;
-        Rewind();
     }
 
     // Update is called once per frame
@@ -35,23 +29,14 @@ public class FollowPath : MonoBehaviour {
         anim.speed = Mathf.Abs(timeScale);
     }
 
-    void FixedUpdate()
+    public void Rewind(float speed)
     {
-        Debug.Log(rb2d.velocity);
-        if ((lastPos.x < transform.position.x && !facingRight) || (lastPos.x > transform.position.x && facingRight)) {
-            Flip();
-        }
-        lastPos = transform.position;
+        timeScale = -1f * speed;
     }
 
-    public void Rewind()
+    public void Play(float speed)
     {
-        timeScale = -1f;
-    }
-
-    public void Play()
-    {
-        timeScale = 1f;
+        timeScale = 1f * speed;
     }
 
     public void Pause()
@@ -59,12 +44,10 @@ public class FollowPath : MonoBehaviour {
         timeScale = 0f;
     }
 
-    void Flip()
+    void OnDrawGizmos()
     {
-        facingRight = !facingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        // For debugging
+        iTween.DrawPathGizmos(waypoints);
     }
 
 }
